@@ -1,6 +1,6 @@
 # goearly
 
-Community voice driven goup-buy drop shipping with a social cause to support low income families/
+Community voice driven group-buy drop platform with a social cause to support low income communities. 
 
 ETH Denver Hackathon
 
