@@ -8,9 +8,24 @@ ETH Denver Hackathon
 
 <!-- VIDEO -->
 
+<!-- Problems/challenges addressed -->
+
+<!-- The solution -->
+
+<!-- Why is this important to us? -->
+
 ## User Experience
+
+<!-- add a gif -->
+
+
+## User Flow Chart
+
 
 ## DApp Structure
 
-## User Flow Chart
+## Business Model
+
+## The Team
+<!-- About -->
 
