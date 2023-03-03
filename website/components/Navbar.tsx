@@ -4,9 +4,11 @@ import styles from "../styles/Navbar.module.css";
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <a href="" target={"_blank"}>
-        <img className={styles.logo} src="../public/GoEarlyLogo.png"></img>
+      <a href="">
+        <img className={styles.logo} src="https://i.imgur.com/iR4V9Le.png" />
       </a>
+      <a href="">Products</a>
+      <a href="">Donate</a>
       <ConnectButton label="Sign in"></ConnectButton>
     </nav>
   );
