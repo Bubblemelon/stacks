@@ -2,7 +2,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
+import Provider from "../components/Provider";
 import styles from "../styles/Home.module.css";
+
+import Box from "@mui/material/Box";
+import TextField from "@mui/material/TextField";
 
 const Home: NextPage = () => {
   return (
@@ -22,9 +26,22 @@ const Home: NextPage = () => {
           Welcome to <span>GoEarly</span>
         </h1>
 
-        <p className={styles.description}>Get started by signing your wallet</p>
-
-        <div className={styles.grid}>
+        <Provider />
+        <Box
+          component="form"
+          sx={{
+            "& > :not(style)": { m: 1, width: "36ch" },
+          }}
+          noValidate
+          autoComplete="off"
+        >
+          <TextField
+            id="standard-basic"
+            label="Amount to Deposit"
+            variant="standard"
+          />
+        </Box>
+        {/* <div className={styles.grid}>
           <a className={styles.card}>
             <h2>Privacy</h2>
             <p>
@@ -42,7 +59,7 @@ const Home: NextPage = () => {
               ultrices eros.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>
