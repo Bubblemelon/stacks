@@ -1,0 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 4rem 0.8rem 4rem;
+  gap: 2rem;
+}
+
+.logo {
+  width: 15rem;
+  cursor: pointer;
+}
