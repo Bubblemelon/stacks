@@ -1,10 +1,8 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Navbar from "../components/Navbar";
-import Provider from "../components/Provider";
+import Item from "../components/Item";
 import styles from "../styles/Home.module.css";
-
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
@@ -20,46 +18,24 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <span>GoEarly</span>
-        </h1>
-
-        <Provider />
-        <Box
-          component="form"
-          sx={{
-            "& > :not(style)": { m: 1, width: "36ch" },
-          }}
-          noValidate
-          autoComplete="off"
-        >
-          <TextField
-            id="standard-basic"
-            label="Amount to Deposit"
-            variant="standard"
-          />
-        </Box>
-        {/* <div className={styles.grid}>
-          <a className={styles.card}>
-            <h2>Privacy</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              ipsum nunc, ultricies a odio dictum, congue mattis felis. Morbi et
-              ultrices eros.
-            </p>
-          </a>
-
-          <a className={styles.card}>
-            <h2>Anonimity</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              ipsum nunc, ultricies a odio dictum, congue mattis felis. Morbi et
-              ultrices eros.
-            </p>
-          </a>
-        </div> */}
+        <div className={styles.grid}>
+          <Box
+            component="form"
+            sx={{
+              "& > :not(style)": { m: 1, width: "36ch" },
+            }}
+            noValidate
+            autoComplete="off"
+          >
+            <TextField
+              id="standard-basic"
+              label="Amount to Deposit"
+              variant="standard"
+            />
+          </Box>
+          <Item />
+        </div>
       </main>
 
       <footer className={styles.footer}>

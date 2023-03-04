@@ -40,7 +40,7 @@ interface IZkBobDirectDeposits {
         address fallbackReceiver,
         uint256 amount,
         bytes memory zkAddress
-    )
+     )
         external
         returns (uint256 depositId);
 

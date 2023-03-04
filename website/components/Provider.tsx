@@ -4,11 +4,6 @@ import { useAccount, useConnect, useDisconnect } from "wagmi";
 import { InjectedConnector } from "wagmi/connectors/injected";
 import styles from "../styles/Provider.module.css";
 
-const client = createClient({
-  autoConnect: true,
-  provider: getDefaultProvider(),
-});
-
 function Profile() {
   const { address, isConnected } = useAccount();
   const { connect } = useConnect({
@@ -25,9 +20,9 @@ function Profile() {
       <div>
         Connected to {address}
         {/* <button onClick={() => disconnect()}>Disconnect</button> */}
-        <div>
+        {/* <div>
           Current Balance: {data?.formatted} {data?.symbol}
-        </div>
+        </div> */}
       </div>
     );
   else
@@ -41,8 +36,8 @@ function Profile() {
 
 export default function Provider() {
   return (
-    <WagmiConfig client={client}>
+    <div>
       <Profile />
-    </WagmiConfig>
+    </div>
   );
 }

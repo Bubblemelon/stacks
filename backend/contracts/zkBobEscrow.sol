@@ -1,18 +1,31 @@
 //Begin
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.15;
+pragma solidity 0.8.9;
 
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; //you import the interface
 import "../interfaces/IZkBobDirectDeposits.sol";
 
 contract directDepositToZkBobAddress{
+    enum Status {
+        OPEN,
+        PENDING,
+        DELIVERY,
+        CONFIRMED,
+        DISPUTTED,
+        REFUNDED,
+        WITHDRAWED
+    }
 
     IERC20 private bob;
     IZkBobDirectDeposits private queue;
     address private fallbackReceiver;
     uint256 private depositId;
 
-    constructor(string memory rawZkAddress, uint256 amount) {
+    constructor(uint256 amount) {
+        // Ben's ZKBOBAddress
+        // string memory rawZkAddress = "TZiNVUs7q5giWr4Rnqk6FSadDiWRqVGtWVpSSmCmLPDyBbbK8NFk1nFDuW5arpq";
+        // Han's ZKBOBAddress
+        string memory rawZkAddress = "6Rhu4n55vxumZAnekEYoS2c1VHychjcnvNJZAkw7tFuzvwjWpruMN5eaXjw7pwP";
         // bob token smart contract address
         bob = IERC20(0xB0B195aEFA3650A6908f15CdaC7D92F8a5791B0B);
         // zkbobdirectdeposit queue smart contract address

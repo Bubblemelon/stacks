@@ -9,6 +9,7 @@ export default function Navbar() {
       </a>
       <a href="">Products</a>
       <a href="">Donate</a>
+      <a href="">Lending Pool</a>
       <ConnectButton label="Sign in"></ConnectButton>
     </nav>
   );
