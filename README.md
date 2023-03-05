@@ -14,13 +14,9 @@ ETH Denver Hackathon
 
 <!-- Why is this important to us? -->
 
-## User Experience
-
-<!-- add a gif -->
-
-
 ## User Flow Chart
 
+[User Flow Chart](./public/dapp.drawio.png)
 
 ## DApp Structure
 

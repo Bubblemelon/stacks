@@ -8,6 +8,17 @@
 }
 
 .logo {
-  width: 15rem;
+  width: 10rem;
   cursor: pointer;
+}
+
+.NavItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.rightNavItems {
 }
