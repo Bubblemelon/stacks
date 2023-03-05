@@ -81,7 +81,11 @@ export default function BuyBtn() {
           Buy Bundle
         </BootstrapButton>
       ) : (
-        <Link href="#" underline="hover">
+        <Link
+          href="https://bumblebee-raccoon-m7we.squarespace.com/nft1"
+          target="_blank"
+          underline="hover"
+        >
           Claim your NFT now!
         </Link>
       )}
