@@ -21,8 +21,8 @@ const Home: NextPage = () => {
         <div className={styles.grid}>
           <Item />
           <div>
-            <h1>MOBA BUNDLE</h1>
-            <h3>$25</h3>
+            <h1>BATTLE BUNDLE</h1>
+            <h3>$20</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <BuyBtn />
           </div>
