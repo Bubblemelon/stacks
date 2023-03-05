@@ -1,8 +1,8 @@
-//Begin
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity ^0.8.9;
 
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; //you import the interface
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+//import "https://github.com/zkBob/zkbob-contracts/blob/master/src/interfaces/IZkBobDirectDeposits.sol";
 import "../interfaces/IZkBobDirectDeposits.sol";
 
 contract directDepositToZkBobAddress{
@@ -18,24 +18,20 @@ contract directDepositToZkBobAddress{
 
     IERC20 private bob;
     IZkBobDirectDeposits private queue;
-    address private fallbackReceiver;
-    uint256 private depositId;
+    address fallbackReceiver;
+    uint256 depositId;
 
     constructor(uint256 amount) {
-        // Ben's ZKBOBAddress
-        // string memory rawZkAddress = "TZiNVUs7q5giWr4Rnqk6FSadDiWRqVGtWVpSSmCmLPDyBbbK8NFk1nFDuW5arpq";
-        // Han's ZKBOBAddress
-        string memory rawZkAddress = "6Rhu4n55vxumZAnekEYoS2c1VHychjcnvNJZAkw7tFuzvwjWpruMN5eaXjw7pwP";
-        // bob token smart contract address
-        bob = IERC20(0xB0B195aEFA3650A6908f15CdaC7D92F8a5791B0B);
-        // zkbobdirectdeposit queue smart contract address
-        queue = IZkBobDirectDeposits(0x668c5286eAD26fAC5fa944887F9D2F20f7DDF289);
-        // user public 0x address; will receive the funds if deposit is rejectied 
+         // sepolia smart contract addresses
+        bob = IERC20(0x2C74B18e2f84B78ac67428d0c7a9898515f0c46f);
+        queue = IZkBobDirectDeposits(0xE3Dd183ffa70BcFC442A0B9991E682cA8A442Ade);
+        // hardcoded value for testing purposes
+        bytes memory zkAddress = hex"a056dcaeeb9ad09e58f9272d0a930523927dd3831b2dc756066c59b9dfa7057157ff509eec408069f238";        
+        
+        // user's 0x public address
         fallbackReceiver = msg.sender;  
 
-        // Option A, through pool contract
-        // Note that ether is an alias for 10**18 multiplier, as BOB token has 18 decimals
-        bytes memory zkAddress = bytes(rawZkAddress);    
+        // Ether = 10**18 multiplier, (BOB token has 18 decimals)
         bob.approve(address(queue), amount);
         depositId = queue.directDeposit(fallbackReceiver, amount, zkAddress);
     }
