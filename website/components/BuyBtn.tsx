@@ -5,6 +5,8 @@ import { purple } from "@mui/material/colors";
 import { useContractWrite, usePrepareContractWrite, useSigner } from "wagmi";
 import { ethers } from "ethers";
 import cogoToast from "cogo-toast";
+import React, { useState } from "react";
+import Link from "@mui/material/Link";
 
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
@@ -43,9 +45,10 @@ const BootstrapButton = styled(Button)({
 });
 
 export default function BuyBtn() {
+  const [showDiv, setShowDiv] = useState(false);
+
   const { data: signer } = useSigner({ chainId: 5 });
 
-  //
   const submitDepositHandler = async () => {
     if (signer == undefined) return;
 
@@ -54,20 +57,34 @@ export default function BuyBtn() {
       ["function createItem(string) payable internal returns (bool)"],
       signer
     );
-    cogoToast.success("This is a success message!");
 
     try {
-      await contract.createItem("__", { value: 1 });
+      const tx = await contract.createItem("---", { value: 1 });
+      console.log(tx);
+      const receipt = await tx.wait();
+      console.log("Transaction receipt");
+      console.log(receipt);
+
+      cogoToast.success("Order purchase completed!");
+      setShowDiv(!showDiv);
     } catch (error) {}
   };
 
   return (
-    <BootstrapButton
-      onClick={submitDepositHandler}
-      variant="contained"
-      disableRipple
-    >
-      Buy Bundle
-    </BootstrapButton>
+    <div>
+      {!showDiv ? (
+        <BootstrapButton
+          onClick={submitDepositHandler}
+          variant="contained"
+          disableRipple
+        >
+          Buy Bundle
+        </BootstrapButton>
+      ) : (
+        <Link href="#" underline="hover">
+          Claim your NFT now!
+        </Link>
+      )}
+    </div>
   );
 }

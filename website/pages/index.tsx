@@ -3,8 +3,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Item from "../components/Item";
 import styles from "../styles/Home.module.css";
-import Box from "@mui/material/Box";
-import TextField from "@mui/material/TextField";
 import BuyBtn from "../components/BuyBtn";
 
 const Home: NextPage = () => {
@@ -21,20 +19,6 @@ const Home: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         <div className={styles.grid}>
-          {/* <Box
-            component="form"
-            sx={{
-              "& > :not(style)": { m: 1, width: "36ch" },
-            }}
-            noValidate
-            autoComplete="off"
-          >
-            <TextField
-              id="standard-basic"
-              label="Amount to Deposit"
-              variant="standard"
-            />
-          </Box> */}
           <Item />
           <div>
             <h1>MOBA BUNDLE</h1>
