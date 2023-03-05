@@ -1,12 +1,20 @@
-# goearly
+# STACKS
 
-Community voice driven group-buy drop platform with a social cause to support low income communities. 
+Stacks, a social and community centric solution that aligns the  buying power of bargain gamers with the interests of indie game developers.
 
 ETH Denver Hackathon
 
 ## Pitch
 
+[![](/public/stacks_landing_page.png)](https://www.youtube.com/watch?v=TR1CISp6VVg
+)
+
+
 <!-- VIDEO -->
+
+📹 [Pitch Video](https://www.youtube.com/watch?v=TR1CISp6VVg)
+
+👀 [Slide Deck](/public/stacks_slide_deck.pdf)
 
 <!-- Problems/challenges addressed -->
 
@@ -18,29 +26,25 @@ ETH Denver Hackathon
 
 [User Flow Chart](./public/dapp.drawio.png)
 
-## DApp Structure
-
-
-## Business Model
+[See a live interface mockup](https://bumblebee-raccoon-m7we.squarespace.com/https://bumblebee-raccoon-m7we.squarespace.com/)
 
 #### Partner + Community 
 We partner with emerging games  to launch new games and acquire players
 
 Profits funnel into a fund that will  be donated to low-income families. 
 
-CIRCULAR ECONOMY
+## Business Model
 
-[Circular Economy Diagram](./public/CircularEconomyDiagram.png)
+### CIRCULAR ECONOMY
 
-GAMIFYING STACKS
+![Circular Economy Diagram](./public/CircularEconomyDiagram.png)
 
-[Gamifying Stacks](./public/GamifyingStacks.png)
+### GAMIFYING STACKS
+
+![Gamifying Stacks](./public/GamifyingStacks.png)
 
 
 ## The Team
 
-Cheryl Fong
-Michelle Dhansinghani
-Hannah Pham
-Ben Liang
+![team slide page](public/stacks_team.jpg)
 
