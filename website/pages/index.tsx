@@ -23,7 +23,7 @@ const Home: NextPage = () => {
           <div>
             <h1>BATTLE BUNDLE</h1>
             <h3>$20</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Games focused on simulated combat between players.</p>
             <BuyBtn />
           </div>
         </div>
