@@ -4,6 +4,7 @@ import Stack from "@mui/material/Stack";
 import { purple } from "@mui/material/colors";
 import { useContractWrite, usePrepareContractWrite, useSigner } from "wagmi";
 import { ethers } from "ethers";
+import cogoToast from "cogo-toast";
 
 const BootstrapButton = styled(Button)({
   boxShadow: "none",
@@ -41,9 +42,10 @@ const BootstrapButton = styled(Button)({
   },
 });
 
-export default function DepositBtn() {
+export default function BuyBtn() {
   const { data: signer } = useSigner({ chainId: 5 });
 
+  //
   const submitDepositHandler = async () => {
     if (signer == undefined) return;
 
@@ -52,6 +54,8 @@ export default function DepositBtn() {
       ["function createItem(string) payable internal returns (bool)"],
       signer
     );
+    cogoToast.success("This is a success message!");
+
     try {
       await contract.createItem("__", { value: 1 });
     } catch (error) {}
@@ -63,7 +67,7 @@ export default function DepositBtn() {
       variant="contained"
       disableRipple
     >
-      Deposit
+      Buy Bundle
     </BootstrapButton>
   );
 }

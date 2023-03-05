@@ -5,6 +5,7 @@ import Item from "../components/Item";
 import styles from "../styles/Home.module.css";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import BuyBtn from "../components/BuyBtn";
 
 const Home: NextPage = () => {
   return (
@@ -20,7 +21,7 @@ const Home: NextPage = () => {
       <Navbar />
       <main className={styles.main}>
         <div className={styles.grid}>
-          <Box
+          {/* <Box
             component="form"
             sx={{
               "& > :not(style)": { m: 1, width: "36ch" },
@@ -33,8 +34,14 @@ const Home: NextPage = () => {
               label="Amount to Deposit"
               variant="standard"
             />
-          </Box>
+          </Box> */}
           <Item />
+          <div>
+            <h1>MOBA BUNDLE</h1>
+            <h3>$25</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <BuyBtn />
+          </div>
         </div>
       </main>
 
