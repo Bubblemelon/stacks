@@ -6,9 +6,7 @@ ETH Denver Hackathon
 
 ## Pitch
 
-
-<a href="https://www.youtube.com/watch?v=TR1CISp6VVg"><img src="./public/stacks_landing_page.png"></a>
-
+![Slide Deck](/public/stacks_landing_page.png)
 
 <!-- VIDEO -->
 
