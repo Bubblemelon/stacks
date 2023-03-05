@@ -6,7 +6,7 @@ ETH Denver Hackathon
 
 ## Pitch
 
-![Slide Deck](/public/stacks_landing_page.png)
+![Slide Deck](/public/stacks_landing_page.jpg)
 
 <!-- VIDEO -->
 
