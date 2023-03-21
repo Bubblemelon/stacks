@@ -1,8 +1,10 @@
 # STACKS
 
-Stacks, a social and community centric solution that aligns the  buying power of bargain gamers with the interests of indie game developers.
+A social and community centric solution that aligns the  buying power of bargain gamers with the interests of indie game developers.
 
-ETH Denver Hackathon
+STACKS is a [ETH Denver Hackathon](https://ethereumdenver.medium.com/ethdenver-2023-track-and-bounty-winners-1d9cbeda1dc8) ZKBob Bounty Winner of USD 2500! 
+
+![zkbob bounty winner gif](public/zkbob_bounty_winner.gif)
 
 ## Pitch
 
@@ -40,7 +42,7 @@ Profits funnel into a fund that will  be donated to low-income families.
 ### GAMIFYING STACKS
 
 ![Gamifying Stacks](./public/GamifyingStacks.png)
-
+ 
 
 ## The Team
 
